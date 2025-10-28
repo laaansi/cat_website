@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Котики</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kablammo&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background_Cat"></div>
+
+        <form>
+    <h1 style="text-align: center; font-family: Kablammo; color: black;">Мяу, мяу?</h1>
+    <div class="input">
+        
+        <div class="input-container">
+            <input class="input_text" id="name" type="text" name="name" 
+                   placeholder="Введите имя" pattern="[А-Яа-яA-Za-z]{2,30}" required />
+            <div class="hint">Только буковки, введите от 2 до 30 символов</div>
+        </div>
+        
+        <div class="input-container">
+            <input class="input_text" id="surname" type="text" name="surname" 
+                   placeholder="Введите фамилию" pattern="[А-Яа-яA-Za-z]{2,30}" required />
+            <div class="hint">Только буковки, введите от 2 до 30 символов</div>
+        </div>
+
+        <div class="input-container">
+            <select class="input_select" name="groups" id="group-select" required>
+                <option value="" disabled selected>Выберите группу</option>
+                <option value="AVb-24-1">АВб-24-1</option>
+                <option value="AVb-24-2">АВб-24-2</option>
+                <option value="AVb-24-3">АВб-24-3</option>
+                <option value="Other">Другая</option>
+            </select>
+            <div class="hint">Выберите вашу учебную группу</div>
+        </div>
+
+        <div class="input-container">
+            <input class="input_email" placeholder="Введите email" type="email" 
+                   id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required />
+            <div class="hint">Например: Kotiki666@example.com</div>
+        </div>
+
+        <div class="input-container">
+            <input class="input_tel" placeholder="Введите телефон" type="tel" 
+                   id="phone" name="phone" pattern="\+7\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}" />
+            <div class="hint">Например: +7 (000) 000-00-00</div>
+        </div>
+
+        <div class="input-container">
+            <textarea class="textarea_information" id="info" name="info" 
+                      placeholder="Пару слов о себе" maxlength="500" required></textarea>
+            <div class="hint">Максимум 500 символов, извините!</div>
+        </div>
+
+        <div class="input-container">
+            <input class="input_file" type="file" id="file"/>
+            <label class="lable_file" for="file">Загрузить фото для профиля</label>
+            <div class="hint">Форматики файлов: JPG, PNG, GIF. Макс. размер: нету!</div>
+        </div>
+
+        <button class="button" type="submit">Познакомиться!</button>
+    </div>
+</form>
+
+</body>
+</html>
