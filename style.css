@@ -1,0 +1,230 @@
+body {
+    background-position: top;
+    background-repeat: no-repeat;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.background_Cat {
+    background-image: url(images/cat.jpg);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #f9bfbc;
+    background-size: auto 100%;
+    width: 100%;
+    height: 400px;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    padding: 40px 0;
+}
+
+.input-container {
+    position: relative;
+    width: 80%;
+    margin: 10px 0;
+}
+
+.input_text, .input_tel, .input_email {
+    background-color: #807c7d1f;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 100%;
+    min-height: 55px;
+    color: black;
+    padding: 10px 20px;
+    margin: 0;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 15px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.input_text:not(:placeholder-shown):valid,
+.input_email:not(:placeholder-shown):valid {
+    background-image: url("images/cat_success.png");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 20px;
+    box-shadow: 0 0 5px rgba(31, 102, 17, 0.836);
+    padding-right: 50px;
+}
+
+.input_text:not(:placeholder-shown):invalid,
+.input_email:not(:placeholder-shown):invalid {
+    background-image: url("images/cat_wrong.png");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 20px;
+    padding-right: 50px;
+    box-shadow: 0 0 5px rgba(110, 4, 4, 0.747);
+}
+
+.input_tel:not(:placeholder-shown):valid {
+    background-image: url("images/cat_success.png");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 20px;
+    box-shadow: 0 0 5px rgba(31, 102, 17, 0.836);
+    padding-right: 50px;
+}
+
+.input_tel:not(:placeholder-shown):invalid {
+    background-image: url("images/cat_wrong.png");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 20px;
+    padding-right: 50px;
+    box-shadow: 0 0 5px rgba(110, 4, 4, 0.747);
+}
+
+.input_text:focus,
+.input_tel:focus,
+.input_email:focus,
+.input_select:focus,
+.textarea_information:focus {
+    outline: none;
+    box-shadow: 0 0 8px rgba(249, 191, 188, 0.5);
+    background-color: #fff;
+}
+
+.input_select {
+    background-color: #807c7d1f;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 100%;
+    min-height: 55px;
+    color: black;
+    padding: 10px 20px;
+    margin: 0;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 15px;
+    box-sizing: border-box;
+    
+    appearance: none;
+    padding-right: 50px;
+    background-image: url("images/cat_select.png");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 20px;
+    transition: all 0.3s ease;
+}
+
+.input_select:invalid {
+    color: grey;
+}
+
+.input_select:valid {
+    color: black;
+}
+
+.input_select option {
+    color: black;
+}
+
+.input_select option[disabled] {
+    color: grey;
+}
+
+.textarea_information {
+    background-color: #807c7d1f;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 100%;
+    min-height: 155px;
+    color: black;
+    padding: 15px 20px;
+    margin: 0;
+    border: none;
+    border-radius: 15px;
+    font-size: 15px;
+    box-sizing: border-box;
+    resize: none;
+    transition: all 0.3s ease;
+}
+
+.hint {
+    font-size: 12px;
+    color: #666;
+    margin-top: 5px;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-left: 10px;
+}
+
+.input_text:focus + .hint,
+.input_tel:focus + .hint,
+.input_email:focus + .hint,
+.textarea_information:focus + .hint,
+.input_select:focus + .hint,
+.input_file:focus + .hint {
+    opacity: 1;
+    height: auto;
+}
+
+.lable_file:hover + .hint {
+    opacity: 1;
+    height: auto;
+}
+
+.input_file {
+    display: none;
+}
+
+.lable_file {
+    margin: 0;
+    height: 100px;
+    width: 100%;
+    border-radius: 15px;
+    border: 1px dashed grey;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    
+    cursor: pointer;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: all 0.3s ease;
+    background-color: #807c7d1f;
+}
+
+.lable_file:hover {
+    color: #f9bfbc;
+    border: 1px dashed #f9bfbc;
+    background-color: #f9f9f9;
+}
+
+.button {
+    background-color: #f9bfbc;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 80%;
+    min-height: 55px;
+    color: black;
+    padding: 10px 20px;
+    margin: 20px 0;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background-color: #e8aca9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
